@@ -78,14 +78,14 @@ int arvore_Pertence(Arvore* a, Aluno* al){
     }
 }
 
-static int max2 (int a, int b){
-    return (a>b) ? a : b;
+static int maiorEntreOsDois (int a, int b){
+    return (a>b) ? a : b; // retorna a se a>b ou b se a<b
 }
 
 int arvore_altura(Arvore* a){
     if(arvore_Vazia(a)){
         return -1;
     }else{
-        return 1 + max2 (arvore_altura(a->esq), arvore_altura(a->dir));
+        return 1 + maiorEntreOsDois (arvore_altura(a->esq), arvore_altura(a->dir));
     }
 }
